@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Domain Search</string>
+    <string name="title_once">单个搜索</string>
+    <string name="title_multiple">批量搜索</string>
+    <string name="title_info">域名信息</string>
+
+    <string name="prompt_domain">输入域名，例如：lizheblogs.com</string>
+    <string name="domain_edit_error">域名输入错误</string>
+
+
+    <string name="prompt_domain_mult" formatted="false">\?代表a-z。例如：??.com</string>
+    <string name="stop">停止</string>
+
+    <string name="DomainName">域名：</string>
+    <string name="Registrar">注册商：</string>
+    <string name="CreationDate">注册日期：</string>
+    <string name="ExpirationDate">到期日期：</string>
+    <string name="UpdatedDate">更新日期：</string>
+    <string name="RegistrantName">注册人姓名：</string>
+    <string name="RegistrantCountry">注册人国家：</string>
+    <string name="RegistrantPhone">注册人电话：</string>
+    <string name="AdminName">管理联系人姓名：</string>
+    <string name="AdminPhone">管理联系人电话：</string>
+    <string name="TechName">技术联系人姓名：</string>
+    <string name="TechPhone">技术联系人电话：</string>
+    <string name="OriginalInfo">原始信息：</string>
+
+    <string name="once_instruction">单个域名查询 \n输入框输入域名 \n下方空白处显示结果列表</string>
+    <string name="multiple_instruction">批量域名查询 \n显示可注册域名列表</string>
+    <string name="multiple_instruction2">显示查询结果列表</string>
+    <string name="info_instruction">域名信息如下：</string>
+
+</resources>

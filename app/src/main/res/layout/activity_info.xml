@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:padding="5dp"
+    tools:context="com.lizheblogs.domainsearch.main.once.SearchFragment">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/domainACTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits=".1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
+            android:hint="@string/prompt_domain"
+            android:imeOptions="actionSearch"
+            android:inputType="textUri"
+            android:selectAllOnFocus="true"
+            android:singleLine="true" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/info_instruction" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        style="@style/TextStyle"
+                        android:text="@string/DomainName" />
+
+                    <TextView
+                        android:id="@+id/DomainName"
+                        style="@style/TextStyle" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        style="@style/TextStyle"
+                        android:text="@string/Registrar" />
+
+                    <TextView
+                        android:id="@+id/Registrar"
+                        style="@style/TextStyle" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        style="@style/TextStyle"
+                        android:text="@string/CreationDate" />
+
+                    <TextView
+                        android:id="@+id/CreationDate"
+                        style="@style/TextStyle" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        style="@style/TextStyle"
+                        android:text="@string/ExpirationDate" />
+
+                    <TextView
+                        android:id="@+id/ExpirationDate"
+                        style="@style/TextStyle" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        style="@style/TextStyle"
+                        android:text="@string/UpdatedDate" />
+
+                    <TextView
+                        android:id="@+id/UpdatedDate"
+                        style="@style/TextStyle" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        style="@style/TextStyle"
+                        android:text="@string/RegistrantName" />
+
+                    <TextView
+                        android:id="@+id/RegistrantName"
+                        style="@style/TextStyle" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        style="@style/TextStyle"
+                        android:text="@string/RegistrantCountry" />
+
+                    <TextView
+                        android:id="@+id/RegistrantCountry"
+                        style="@style/TextStyle" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        style="@style/TextStyle"
+                        android:text="@string/RegistrantPhone" />
+
+                    <TextView
+                        android:id="@+id/RegistrantPhone"
+                        style="@style/TextStyle" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        style="@style/TextStyle"
+                        android:text="@string/AdminName" />
+
+                    <TextView
+                        android:id="@+id/AdminName"
+                        style="@style/TextStyle" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        style="@style/TextStyle"
+                        android:text="@string/AdminPhone" />
+
+                    <TextView
+                        android:id="@+id/AdminPhone"
+                        style="@style/TextStyle" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        style="@style/TextStyle"
+                        android:text="@string/TechName" />
+
+                    <TextView
+                        android:id="@+id/TechName"
+                        style="@style/TextStyle" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        style="@style/TextStyle"
+                        android:text="@string/TechPhone" />
+
+                    <TextView
+                        android:id="@+id/TechPhone"
+                        style="@style/TextStyle" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        style="@style/TextStyle"
+                        android:text="@string/OriginalInfo" />
+
+                    <TextView
+                        android:id="@+id/OriginalInfo"
+                        style="@style/TextStyle"
+                        android:gravity="left" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/ingPB"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#aaaaaaaa"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
