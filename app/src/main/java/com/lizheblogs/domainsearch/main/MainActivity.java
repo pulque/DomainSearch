@@ -12,8 +12,6 @@ import android.view.MenuItem;
 import com.lizheblogs.domainsearch.R;
 import com.lizheblogs.domainsearch.data.DomainCheckRepository;
 import com.lizheblogs.domainsearch.data.DomainInfoRepository;
-import com.lizheblogs.domainsearch.data.remote.DomainCheck;
-import com.lizheblogs.domainsearch.data.remote.DomainInfo;
 import com.lizheblogs.domainsearch.main.info.InfoFragment;
 import com.lizheblogs.domainsearch.main.info.InfoPresenter;
 import com.lizheblogs.domainsearch.main.multiple.SearchMultFragment;

@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -67,6 +66,12 @@ public class SearchMultFragment extends Fragment implements View.OnClickListener
     }
 
     @Override
+    public void onDestroy() {
+        super.onDestroy();
+        presenter.cancelRequest();
+    }
+
+    @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.ingPB:
@@ -110,37 +115,22 @@ public class SearchMultFragment extends Fragment implements View.OnClickListener
 
     @Override
     public void notifyDataSetChanged() {
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                if (arrayAdapter != null) {
-                    arrayAdapter.notifyDataSetChanged();
-                }
-            }
-        });
+        if (arrayAdapter != null) {
+            arrayAdapter.notifyDataSetChanged();
+        }
     }
 
     @Override
     public void notifyLogDataSetChanged() {
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                if (arrayLogAdapter != null) {
-                    arrayLogAdapter.notifyDataSetChanged();
-                }
-            }
-        });
+        if (arrayLogAdapter != null) {
+            arrayLogAdapter.notifyDataSetChanged();
+        }
     }
 
     @Override
     public void hideKeyboard() {
         InputMethodManager imm1 = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
         imm1.hideSoftInputFromWindow(domainACTV.getWindowToken(), 0);
-    }
-
-    @Override
-    public void runOnUiThread(Runnable action) {
-        getActivity().runOnUiThread(action);
     }
 
     @Override

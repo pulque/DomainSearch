@@ -33,8 +33,6 @@ public class SearchMultContract {
 
         void hideKeyboard();
 
-        void runOnUiThread(Runnable action);
-
     }
 
     interface Presenter extends BasePresenter {

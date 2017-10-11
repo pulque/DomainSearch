@@ -19,8 +19,8 @@ public class DomainInfo extends BaseRepository {
     private static final String tag = "DomainInfoRepository";
     //在阿里云上申请的访问控制RAM，https://ram.console.aliyun.com/#/overview
     //请替换成你自己的
-    private static final String AccessKey = "xxxxxx";
-    private static final String Signature = "xxxxxx";
+    private static final String AccessKey = "********";
+    private static final String Signature = "********";
     private final String infoURL = "http://domain.aliyuncs.com/?";
     private final String SEPARATOR = "&";
     private final String EQUAL_SIGN = "=";
