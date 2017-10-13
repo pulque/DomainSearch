@@ -37,7 +37,7 @@ private static final String AccessKey = "xxxxxx";<br>
 private static final String Signature = "xxxxxx";<br>
 <br>
 打包好的APP在根目录下app-release.apk。<br>
-应用已经发布到Google Play上，地址：
+应用已经发布到Google Play上，地址：<br>
 https://play.google.com/store/apps/details?id=com.lizheblogs.domainsearch<br>
 欢迎下载<br>
 <br>
