@@ -16,9 +16,9 @@ public class DomainCheckRepository {
         return new DomainCheckRepository();
     }
 
-    public void searchDomain(String domain, final BaseCallBack mCallBack) {
+    public void searchDomain(String domain, final BaseCallBack<Property> mCallBack) {
         Property property = LocalDomain.getDomainProperty(domain);
-        if (property != null) {
+        if (property != null && property.getReturncode() != 211) {
             mCallBack.onSuccess(property);
         } else {
             DomainCheck.getInstance().searchDomain(domain, new BaseCallBack<Property>() {

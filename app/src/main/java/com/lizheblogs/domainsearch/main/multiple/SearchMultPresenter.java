@@ -33,6 +33,8 @@ public class SearchMultPresenter implements SearchMultContract.Presenter, BaseCa
     private boolean isFail = false;
     private Handler mHandler;
     private SubRunnable runnable;
+    private int sizeRequest = 0;
+    private int sizeMaxRequest = 5;
 
     public SearchMultPresenter(@NonNull DomainCheckRepository infoRepository,
                                @NonNull SearchMultContract.View infoView) {
@@ -44,9 +46,9 @@ public class SearchMultPresenter implements SearchMultContract.Presenter, BaseCa
 
     @Override
     public void start() {
-        adapterData = new ArrayList<String>();
+        adapterData = new ArrayList<>();
         mInfoView.bindData(adapterData);
-        adapterLogData = new ArrayList<LogBean>();
+        adapterLogData = new ArrayList<>();
         mInfoView.bindLogData(adapterLogData);
         mHandler = new Handler(this);
     }
@@ -57,6 +59,7 @@ public class SearchMultPresenter implements SearchMultContract.Presenter, BaseCa
             sendMessage(MSG_ADD_DATA, property.getKey());
         }
         sendMessage(MSG_ADD_LOG_DATA, property);
+        sizeRequest--;
         isFail = false;
         isRunning = false;
     }
@@ -66,6 +69,7 @@ public class SearchMultPresenter implements SearchMultContract.Presenter, BaseCa
         if (!TextUtils.isEmpty(httpRsp)) {
             mInfoView.showToast(httpRsp);
         }
+        sizeRequest--;
         isFail = true;
         isRunning = false;
     }
@@ -117,6 +121,7 @@ public class SearchMultPresenter implements SearchMultContract.Presenter, BaseCa
                             do {
                                 isRunning = true;
                                 sendMessage(MSG_ADD_LOG_DATA, new Property(temp, ""));
+                                sizeRequest++;
                                 checkDomain(temp);
                                 do {
                                     try {
@@ -127,7 +132,7 @@ public class SearchMultPresenter implements SearchMultContract.Presenter, BaseCa
                                     if (isStopRun) {
                                         return;
                                     }
-                                } while (isRunning);
+                                } while (sizeRequest > sizeMaxRequest);
                             } while (isFail);
 
                         }
